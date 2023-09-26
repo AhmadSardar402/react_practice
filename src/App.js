@@ -1,9 +1,12 @@
 import './App.css';
 import Navbar from './components/Navbar';
+import TextForm from './components/TextForm';
 function App() {
   return (
    <>
-   <Navbar title="This is Title" disabledText="Changed"/>
+   <Navbar title ="Chanded Text" disabledText="Changed"/>
+   {/* <Navbar/> */}
+   <TextForm heading="Text Field"/>
   </>
   );
 }

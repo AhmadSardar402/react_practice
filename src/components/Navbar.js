@@ -1,8 +1,8 @@
 import React from 'react'
-
+import PropTypes from 'prop-types';
 const Navbar = (props) => {
   return (
-    <div className="container">
+    <div className="container my-2">
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">{props.title}</a>
@@ -15,18 +15,7 @@ const Navbar = (props) => {
                 <a className="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
-              </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="#">Action</a></li>
-                  <li><a className="dropdown-item" href="#">Another action</a></li>
-                  <li><hr className="dropdown-divider" /></li>
-                  <li><a className="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <a className="nav-link active" aria-current="page" href="#">About</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link disabled" aria-disabled="true">{props.disabledText}</a>
@@ -44,3 +33,13 @@ const Navbar = (props) => {
 }
 
 export default Navbar
+
+Navbar.propTypes = {
+    title: PropTypes.string,
+    disabledText: PropTypes.string
+}
+
+Navbar.defaultProps = {
+    title: 'Set here',
+    disabledText: 'Set here'
+  };
