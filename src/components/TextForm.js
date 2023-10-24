@@ -26,6 +26,7 @@ const TextForm = (props) => {
             </form>
             <button className="btn btn-primary my-2 mx-2" onClick={handleUpClick}>Convert To Uppercase</button>
             <button className="btn btn-primary my-2 mx-2" onClick={handleLoClick}>Convert To Lowercase</button>
+            <button className="btn btn-primary my-2 mx-2" onClick={handleClearClick}>Clear Text</button>
         </div>
         <div className="container my-2">
             <h4>Your Text summary</h4>
